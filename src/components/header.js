@@ -1,34 +1,27 @@
-import * as React from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import PropTypes from "prop-types"
+import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+import Container from 'react-bootstrap/Container'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faInstagram, faFacebookF } from "@fortawesome/free-brands-svg-icons"
+
+const Header = () => (
+  <Container className="pl-auto main-container" fluid={true}>
+  <Navbar expand="lg">
+      <Navbar.Toggle className="border-0 navbar-dark" aria-controls="navbar-toggle" />
+      <Navbar.Collapse id="navbarResponsive" >
+          <Nav className="link-container">
+              <Link style={{ color: "white" }} className="nav-link" to="/" >Home</Link>
+              <a style={{ color: "white" }} className="nav-link" href="#contact" >Contact/Booking</a>
+              <a className="social" href="https://www.facebook.com/Moon-Travelers-Tarot-220673835218164" target=" _blank" rel="noopener noreferrer" aria-label="facebook"><FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon></a>
+              <a className="social" href="https://www.instagram.com/moontravelers/" target=" _blank" rel="noopener noreferrer" aria-label="instagram" ><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></a>
+          </Nav>
+      </Navbar.Collapse>
+  </Navbar>
+  </Container>
 )
 
 Header.propTypes = {

@@ -1,0 +1,93 @@
+.form-container {
+    padding-bottom: 15%;
+    padding-top: 5%;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    h1 {
+        text-align: center;
+        font-size: 5rem;
+        @media (max-width: 700px) {
+            font-size: 4rem;
+        }
+    }
+
+    .form-section {
+        text-align: left;
+        width: 100%;
+        background:#000000;
+        border: 2px solid whitesmoke;
+        border-radius: 20px 20px 20px 20px;
+        
+        label {
+            font-size: 1.75rem;
+            letter-spacing: .25rem;
+            color: whitesmoke;
+            padding-left: 5%;
+            padding-top: 1%;
+            align-content: center;
+            margin-top: 2%;
+            @media (max-width: 700px) {
+                font-size: 1.25rem;
+            }
+            @media (max-width: 400px) {
+                font-size: 1rem;
+            }
+        }
+
+        input, textarea {
+            display: block;
+            width: 90%;
+            font-size: 1.5rem;
+            line-height: 1.5rem * 2;
+            margin-left: 5%;
+            border: none;
+            border-bottom: 5px solid whitesmoke;
+            background: transparent;
+            
+            padding: 0%;
+            outline: none;
+            color: whitesmoke;
+            @media (max-width: 700px) {
+                font-size: 1.25rem;
+            }
+            @media (max-width: 400px) {
+                font-size: 1rem;
+            }
+            @media (max-width: 350px) {
+                width: 200px;
+            }
+        }
+
+        input:focus, textarea:focus, label:focus {
+            border-bottom: 5px solid #000000;
+            color: rgb(156, 57, 156);
+        }
+    
+
+    button {
+        margin: 4.5%;
+        display: block;
+        padding: .75rem 1.25rem;
+        border-radius: 20px 20px 20px 20px;
+        background-color: #000000;
+        color: rgb(156, 57, 156);
+        text-shadow: 1px 1px black;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 900;
+        letter-spacing: .75rem;
+        position: relative;
+        @media (max-width: 700px) {
+            font-size: 1rem;
+            letter-spacing: .25rem;
+        }
+
+      }
+    }
+}  

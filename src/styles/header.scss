@@ -1,0 +1,28 @@
+// Navigation
+.main-container {
+    display: flex;
+    text-align: left;
+    font-size: 1rem;
+    align-items: left;
+    padding: 1.75%;
+    text-shadow: .5px .5px gray;
+      
+    .link-container {
+        margin-left: auto;
+
+        .social {
+            padding: 10px;
+            color: #a582b8;
+            @media (max-width: 500px) {
+            padding: 5px;
+            }
+        }
+    }
+
+    .nav-link {
+        font-size: 1.3rem;
+    }
+
+
+
+}
