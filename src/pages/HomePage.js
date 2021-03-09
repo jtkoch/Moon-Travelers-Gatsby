@@ -7,17 +7,13 @@ import state from '../images/Content/nebraska-state.png'
 import card1 from '../images/Content/card1.jpg'
 import card2 from '../images/Content/card2.jpg'
 import card3 from '../images/Content/card3.jpg'
+import arrow from '../images/Content/downarrow.png'
 
-
-
-const HomeContainer = styled.div`
-
-`
 
 const HomeLogo = styled.img`
     width: 75%;
     margin-top: -4rem;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 
     @media (max-width: 500px) {
         width: 100%;
@@ -44,69 +40,22 @@ const State = styled.img`
         margin: 10px;
     }
 `
-const Info = styled.p`
-    font-size: 2.5rem;
-    padding: 0%;
-    line-height: 3.25rem;
-
-    @media (max-width: 500px) {
-        font-size: 1.25rem;
-        padding-bottom: 5%;
-        line-height: 2rem;
-    }
-`
-const Phone = styled.h1`
-    font-size: 2.75rem;
-    font-weight: bold;
-    padding: 2%;
-`
-const BookingContainer = styled.div`
-    margin: 4%;
-`
-const Booking = styled.a`
-    color: white;
-    font-size: 1.5rem;
-    border: 1px solid white;
-    padding: 1%;
-    border-radius: .5rem;
-
-    @media (max-width: 500px) {
-        font-size: .70rem;
-        border: 1px solid white;
-        padding: 1.5%;
-        border-radius: .5rem;
-    }
-
-    &:hover {
-        background: white;
-        text-decoration: none;
-        color: black;
-        border: 1px solid black;
-      }
-`
-
 
 export default function HomePage() {
     return (
-        <HomeContainer className="home">
+        <container className="home">
             <div className="home-logo" >
                 <HomeLogo src={mainLogo} alt="logo"></HomeLogo>
             </div>
 
-            <Info>
-                Services and Pricing: <br></br>
-                Mini Consult (15min-20min) <br></br>
-                Private Reading (45min-1hr) <br></br>
-                Private Dinner/Party (Hourly Rate) <br></br>
-                Pop Ups and Social Events
-            </Info>
-
-            <Phone>Phone readings are also available upon request</Phone>
-            
-            <BookingContainer>
-                <Booking href="#contact">Schedule a Reading!</Booking>
-            </BookingContainer>
-
+            <div className="info">
+              <p>
+                Hover over <br/>
+                these cards <br/>
+                for more info!
+              </p>
+              <img src={arrow} alt="arror" />
+            </div>
 
             <div className="card-wrapper">
                 <div className="flip-card">
@@ -115,7 +64,15 @@ export default function HomePage() {
                             <img src={card1} alt="card1" />
                         </div>
                         <div className="flip-card-back">
-                            <h3>More information here</h3>
+                            <div className="services">
+                              <h1>Services and Pricing:</h1>
+                              <p>
+                                Mini Consult (15min-20min) <br/>
+                                Private Reading (45min-1hr) <br/>
+                                Private Dinner/Party (Hourly Rate) <br/>
+                                Pop Ups and Social Events
+                              </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -125,7 +82,9 @@ export default function HomePage() {
                             <img src={card2} alt="card2" />
                         </div>
                         <div className="flip-card-back">
-                            <h3>More information here</h3>
+                            <h1 className="phone">
+                              Phone readings are also available upon request
+                            </h1>
                         </div>
                     </div>
                 </div>
@@ -135,7 +94,9 @@ export default function HomePage() {
                             <img src={card3} alt="card3" />
                         </div>
                         <div className="flip-card-back">
-                            <h3>More information here</h3>
+                            <div className="booking">
+                              <a href="#contact">Contact me!</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -154,6 +115,6 @@ export default function HomePage() {
                 </Location>
             </div>
 
-        </HomeContainer>
+        </container>
     )
 }
